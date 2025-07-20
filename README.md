@@ -3,7 +3,7 @@
 This is a companion to the blog post [The fastest Node 22 Lambda coldstart configuration](https://speedrun.nobackspacecrew.com/blog/2025/07/22/the-fastest-node-22-lambda-coldstart-configuration.html)
 
 ## Code notes
-The lambda function makes a `GetCallerIdentity` call to STS using https and emits some metadata about the runtime, environment, and request [src/handler.mjs](src/handler.mts).  It is fronted by a Lambda Function url.
+The lambda function makes a `GetCallerIdentity` call to STS using https and emits some metadata about the runtime, environment, and request [src/index.mts](src/index.mts).  It is fronted by a Lambda Function url.
 
 The CDK stack uses esbuild to bundle the function and marks the unnecessary credentials provider packages as external. It also demonstrates how to set environment variables without adding latency.  It doesn't do any minification. [lib/fast-coldstart-stack.mts](lib/fast-coldstart-stack).
 
