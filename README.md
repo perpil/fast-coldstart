@@ -1,6 +1,6 @@
 # AWS Javascript SDK v3 Lambda Node 22 Benchmark
 
-This is a companion to the blog post [The fastest Node 22 Lambda coldstart configuration](https://speedrun.nobackspacecrew.com/blog/2025/07/22/the-fastest-node-22-lambda-coldstart-configuration.html)
+This is a companion to the blog post [The fastest Node 22 Lambda coldstart configuration](https://speedrun.nobackspacecrew.com/blog/2025/07/21/the-fastest-node-22-lambda-coldstart-configuration.html)
 
 ## Code notes
 The lambda function makes a `GetCallerIdentity` call to STS using https and emits some metadata about the runtime, environment, and request [src/index.mts](src/index.mts).  It is fronted by a Lambda Function url.
